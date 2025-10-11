@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress M.M. International Ltd. - International Recruiting Agency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.maateen.me/siyam-rupali/font.css" rel="stylesheet">
+    <style>
+        html[lang="bn"] body { font-family: 'Siyam Rupali', 'Inter', sans-serif; }
+        html[lang="en"] body { font-family: 'Inter', sans-serif; }
+        html[lang="ar"] body { font-family: 'Cairo', sans-serif; }
+        body { background-color: #f7f9fb; }
+        .hero-bg {
+            background-image: url('https://i.imgur.com/2y9im5M.jpeg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        .text-shadow-custom {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        [data-page] { display: none; }
+        [data-page].active { display: block; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+
+    <!-- Translations will be embedded here -->
+    <script id="translations-data" type="application/json">
+    {
+      "bn": { "companyName": "প্রগ্রেস এম.এম. ইন্টারন্যাশনাল লিঃ", "rlNumberShort": "RL-1008", "rlNumberLong": "লাইসেন্স নং", "navHome": "হোম", "navAbout": "পোর্টফোলিও", "navJobs": "চাকরি", "navStaff": "অফিস স্টাফ", "navContact": "যোগাযোগ", "heroTitle": "আপনার বিশ্বস্ত আন্তর্জাতিক কর্মসংস্থান সঙ্গী", "heroSubtitle": "প্রবাসী কল্যাণ ও বৈদেশিক কর্মসংস্থান মন্ত্রণালয় অনুমোদিত", "heroButton": "সাম্প্রতিক চাকরির চাহিদা দেখুন", "keyInfoLicense": "সরকার অনুমোদিত রিক্রুটিং এজেন্সি", "keyInfoMembership": "সদস্যপদ প্রাপ্ত", "keyInfoExperience": "বছরের সফল অভিজ্ঞতা", "keyInfoEmbassy": "দূতাবাস অনুমোদিত রিক্রুটিং এজেন্সি", "aboutTitle": "আমাদের সম্পর্কে", "aboutPara1": "দীর্ঘদিন ধরে বাংলাদেশের অন্যতম বিশ্বস্ত রিক্রুটিং এজেন্সী হিসেবে কাজ করে আসছে। আমরা কর্মীদের দক্ষতা উন্নয়ন, স্বচ্ছ প্রক্রিয়া এবং নিরাপদ অভিবাসনে প্রতিশ্রুতিবদ্ধ। প্রবাসী কল্যাণ ও বৈদেশিক কর্মসংস্থান মন্ত্রণালয়ের সকল নির্দেশনা মেনেই আমরা আমাদের কার্যক্রম পরিচালনা করি।", "aboutPara2": "আমরা শুধু কর্মী প্রেরণ করি না, বরং তাদের বিদেশে নিরাপদ জীবন ও নিশ্চিত ভবিষ্যতের জন্য প্রয়োজনীয় সকল সহযোগিতা প্রদান করে থাকি। আমাদের মূলমন্ত্র হলো:", "aboutMotto": "স্বচ্ছতা, পেশাদারিত্ব এবং মানবিকতা।", "aboutImageAlt": "প্রগ্রেস এম.এম. ইন্টারন্যাশনাল লিঃ দল", "clientsTitle": "আমাদের সম্মানিত অংশীদার", "clientsSubtitle": "আমরা বিশ্বের শীর্ষস্থানীয় কোম্পানিগুলোর সাথে কাজ করে থাকি, যা আমাদের প্রার্থীদের জন্য সেরা সুযোগ নিশ্চিত করে।", "jobDemandsTitle": "সাম্প্রতিক চাকরির চাহিদা ও আমাদের কাজের ক্ষেত্র", "jobSearchPlaceholder": "পদের নাম, কোম্পানি বা গন্তব্য দিয়ে খুঁজুন...", "jobDestination": "গন্তব্য", "jobQuantity": "মোট কর্মী", "jobPersonUnit": "জন", "jobSalary": "বেতন", "jobApplyLink": "এই পদে আবেদন করুন", "jobLoading": "চাকরির তালিকা লোড হচ্ছে...", "jobLoadError": "চাকরির তালিকা লোড করতে সমস্যা হয়েছে। অনুগ্রহ করে আবার চেষ্টা করুন।", "jobLoadErrorConfig": "ওয়েবসাইটটি সঠিকভাবে কনফিগার করা হয়নি। অনুগ্রহ করে প্রশাসকের সাথে যোগাযোগ করুন।", "jobNoJobs": "এই মুহূর্তে \"{{country}}\" এর জন্য কোনো চাকরির চাহিদা নেই।", "jobNoResults": "\"{{query}}\" এর জন্য কোনো চাকরি খুঁজে পাওয়া যায়নি।", "jobConditionsTitle": "সুযোগ সুবিধা ও শর্তাবলি", "jobCondition1": "চুক্তির মেয়াদ ২ বছর এবং পুনরায় নবায়ন যোগ্য।", "jobCondition2": "ন্যূনতম পাসপোর্টের ০২ বছর মেয়াদ থাকতে হবে।", "jobCondition3": "ইকামা, ইন্সুরেন্স, মেডিকেল কোম্পানিবহন করবে।", "jobCondition4": "অন্যান্য সকল সুবিধাদি সৌদি আরব শ্রম আইন অনুযায়ী প্রযোজ্য।", "transparencyTitle": "স্বচ্ছতা ও জবাবদিহিতা", "transparencyStatsTitle": "প্রেরিত কর্মীর পরিসংখ্যান (২০২৩-২০২৪)", "transparencyTotalSent": "মোট প্রেরিত কর্মী", "countrySaudi": "সৌদি আরব", "countryGCC": "কাতার, কুয়েত, ওমান", "countryEuropeAsia": "ইউরোপ/এশিয়া", "transparencyNoteTitle": "বিশেষ দ্রষ্টব্য", "transparencyNoteText": "বিস্তারিত বহির্গমন ছাড়পত্রের তালিকা মন্ত্রণালয়ের ওয়েবসাইটে প্রকাশ করা হয়।", "transparencySubAgentTitle": "স্বীকৃত সাব-এজেন্টদের বিবরণ (যদি থাকে)", "transparencySubAgent1Name": "মেসার্স ফাহিম এন্টারপ্রাইজ", "transparencySubAgent1Details": "ঠিকানা: মীরপুর, ঢাকা। যোগাযোগ: ০১৬৭৮-XXXXXX", "transparencySubAgent2Name": "আল-আমানী ট্রেডিং", "transparencySubAgent2Details": "ঠিকানা: চাট্টোগ্রাম। যোগাযোগ: ০১৯২২-XXXXXX", "transparencySubAgentNote": "বর্তমানে প্রগ্রেস এম.এম. ইন্টারন্যাশনাল লিঃ কোনো সাব-এজেন্ট নিয়োগ করেনি, অথবা সব কার্যক্রম সরাসরি এজেন্সির মাধ্যমে পরিচালিত হয়।", "staffTitle": "আমাদের প্রধান অফিস স্টাফ", "staffSubtitle": "আমাদের পেশাদার দল আপনার নিরাপদ অভিবাসন নিশ্চিত করতে বদ্ধপরিকর।", "staffViewAll": "সকল স্টাফ দেখুন", "staffViewAllAria": "সকল অফিস স্টাফের তালিকা দেখুন", "staffResponsibility": "দায়িত্ব", "staffPageTitle": "আমাদের নিবেদিতপ্রাণ টিম", "staffBackHome": "হোম পেজে ফিরে যান", "contactTitle": "যোগাযোগ করুন", "contactSubtitle": "আপনার যেকোনো প্রশ্ন বা প্রয়োজনে আমাদের সাথে যোগাযোগ করতে দ্বিধা করবেন না। আমরা আপনাকে সহায়তা করতে সর্বদা প্রস্তুত।", "contactOfficeAddress": "অফিসের ঠিকানা", "contactAddress": "৮/এ, ৪৮ নয়া পল্টন, (৮ম তলা), ঢাকা-১০০০, বাংলাদেশ", "contactPhone": "ফোন", "contactHotline": "হটলাইন", "contactPhoneNumber": "+৮৮০১৬৭৫২৩৭৫৫২", "contactHotlineNumber": "+৮৮০৯৬৪৭০০১২৬০", "contactEmail": "ইমেইল", "contactTalkToUs": "আমাদের সাথে কথা বলুন", "contactMapTitle": "আমাদের অফিসের অবস্থান", "contactMessagePlaceholder": "আপনার বার্তা (কোন দেশে যেতে চান?)", "contactSendButton": "বার্তা প্রেরণ করুন", "contactSendingButton": "পাঠানো হচ্ছে...", "contactGenericError": "একটি ত্রুটি ঘটেছে। অনুগ্রহ করে আবার চেষ্টা করুন।", "contactNetworkError": "নেটওয়ার্ক সমস্যা। অনুগ্রহ করে আপনার সংযোগ পরীক্ষা করে আবার চেষ্টা করুন।", "contactSuccessAlert": "ধন্যবাদ, {{name}}! আপনার বার্তাটি আমরা পেয়েছি।", "footerCopyright": "© {{year}} {{company}} ({{license}})। সর্বস্বত্ত্ব সংরক্ষিত।", "footerCompliance": "Developed for BAIRA Compliance", "footerMinistryLink": "প্রবাসী কল্যাণ মন্ত্রণালয়", "formTitle": "চাকরির জন্য আবেদন করুন", "formLabelName": "আপনার নাম", "formPlaceholderName": "সম্পূর্ণ নাম", "formLabelEmail": "আপনার ইমেইল", "formPlaceholderEmail": "example@email.com", "formLabelPhone": "ফোন নম্বর", "formPlaceholderPhone": "আপনার মোবাইল নম্বর", "formLabelJob": "আগ্রহী পদ", "formSelectJob": "একটি পদ নির্বাচন করুন", "formLabelResume": "আপনার সিভি/রিজিউমে (PDF, DOC, DOCX)", "formSelectFile": "ফাইল নির্বাচন করুন", "formNoFileSelected": "কোনো ফাইল নির্বাচন করা হয়নি", "formReselectFile": "পুনরায় নির্বাচন করুন", "formMaxFileSize": "সর্বোচ্চ ফাইলের আকার: 5MB।", "formLabelMessage": "সংক্ষিপ্ত বার্তা (ঐচ্ছিক)", "formPlaceholderMessage": "আপনার কোনো প্রশ্ন বা বার্তা থাকলে এখানে লিখুন...", "formSubmitButton": "আবেদন জমা দিন", "formAriaUploadResume": "আপনার রিজিউমে আপলোড করুন", "formConfirmSubmit": "আপনি কি নিশ্চিতভাবে আবেদনটি জমা দিতে চান?", "formSuccessAlert": "ধন্যবাদ, {{name}}! আপনার আবেদনটি \"{{job}}\" পদের জন্য গ্রহণ করা হয়েছে। আমরা শীঘ্রই আপনার সাথে যোগাযোগ করবো।", "errorFullNameRequired": "আপনার সম্পূর্ণ নাম আবশ্যক।", "errorEmailRequired": "আপনার ইমেইল আবশ্যক।", "errorEmailInvalid": "একটি বৈধ ইমেইল ঠিকানা দিন।", "errorPhoneRequired": "আপনার ফোন নম্বর আবশ্যক।", "errorPhoneInvalid": "একটি বৈধ ফোন নম্বর দিন।", "errorJobTitleRequired": "অনুগ্রহ করে একটি পদ নির্বাচন করুন।", "errorResumeRequired": "আপনার সিভি/রিজিউমে আপলোড করা আবশ্যক।", "errorFileSize": "ফাইলের আকার 5MB এর বেশি হতে পারবে না।", "portfolioTitle": "আমাদের প্রাতিষ্ঠানিক পোর্টফোলিও", "portfolioSubtitle": "স্বচ্ছতা ও পেশাদারিত্বে এক দশকেরও বেশি সময়ের পথচলা", "portfolioAboutSectionTitle": "আমাদের পরিচিতি", "portfolioAboutPara": "বাংলাদেশের একটি শীর্ষস্থানীয় এবং সরকার অনুমোদিত আন্তর্জাতিক রিক্রুটিং এজেন্সী। এক দশকেরও বেশি সময় ধরে, আমরা সততা, স্বচ্ছতা এবং পেশাদারিত্বের সাথে হাজার হাজার বাংলাদেশী কর্মীকে বিশ্বের বিভিন্ন দেশে কর্মসংস্থানের সুযোগ করে দিয়েছি। আমাদের মূল লক্ষ্য হলো, কর্মীদের জন্য একটি নিরাপদ এবং নির্ভরযোগ্য অভিবাসন প্রক্রিয়া নিশ্চিত করা।", "portfolioMissionTitle": "আমাদের লক্ষ্য (Mission)", "portfolioMissionDesc": "আমাদের লক্ষ্য হলো নৈতিক práticas মেনে বাংলাদেশের প্রতিভাবান কর্মীদের বিশ্বমানের সুযোগের সাথে যুক্ত করে ইতিবাচক পরিবর্তনের অনুঘটক হওয়া। আমরা আমাদের কর্মীদের নিরাপত্তা, কল্যাণ ও পেশাগত উন্নতি নিশ্চিত করতে ব্যাপক প্রশিক্ষণ এবং স্বচ্ছ প্রক্রিয়ার মাধ্যমে তাদের ক্ষমতায়নে প্রতিশ্রুতিবদ্ধ। সর্বোচ্চ সততা বজায় রেখে এবং রেমিট্যান্সের মাধ্যমে জাতীয় অর্থনীতিতে অবদান রেখে আমরা আমাদের প্রেরিত প্রতিটি কর্মী এবং দেশের জন্য একটি উজ্জ্বল ভবিষ্যৎ নির্মাণ করতে বদ্ধপরিকর।", "portfolioVisionTitle": "আমাদের উদ্দেশ্য (Vision)", "portfolioVisionDesc": "আমাদের স্বপ্ন হলো আন্তর্জাতিক কর্মী নিয়োগের ক্ষেত্রে বাংলাদেশ থেকে শ্রেষ্ঠত্বের মানদণ্ড ও অবিসংবাদিত প্রতিষ্ঠান হিসেবে প্রতিষ্ঠিত হওয়া। আমরা এমন একটি ভবিষ্যৎ গড়ার লক্ষ্য রাখি, যেখানে প্রত্যেক বাংলাদেশী কর্মী তার দক্ষতা ও পেশাদারিত্বের জন্য বিশ্বজুড়ে সমাদৃত হবেন। ধারাবাহিক উদ্ভাবন, স্বনামধন্য নিয়োগকর্তাদের সঙ্গে কৌশলগত অংশীদারিত্ব এবং নৈতিকতার প্রতি অটল থেকে আমরা প্রার্থী ও গ্রাহক উভয়ের কাছেই সবচেয়ে নির্ভরযোগ্য এজেন্সি হতে চাই, যা এই শিল্পে গুণমান, বিশ্বাসযোগ্যতা ও সামাজিক দায়বদ্ধতার নতুন দিগন্ত উন্মোচন করবে।", "portfolioLicense1Alt": "সরকারি রিক্রুটিং লাইসেন্স", "portfolioLicense2Alt": "ট্রেড লাইসেন্স", "portfolioServicesSectionTitle": "আমাদের সেবাসমূহ", "service1Title": "দক্ষতা যাচাই ও প্রশিক্ষণ", "service1Desc": "আমরা আন্তর্জাতিক মানের প্রশিক্ষণ কেন্দ্রে কর্মীদের দক্ষতা যাচাই এবং প্রয়োজনীয় ট্রেনিং প্রদান করি।", "service2Title": "ভিসা প্রক্রিয়াককরণ", "service2Desc": "সকল দেশের জন্য দ্রুত এবং নির্ভুলভাবে ভিসা আবেদন ও প্রক্রিয়াকরণের সেবা প্রদান করি।", "service3Title": "প্রি-ডিপার্চার ব্রিফিং", "service3Desc": "কর্মীদের বিদেশ যাত্রার পূর্বে সেই দেশের আইন, সংস্কৃতি এবং কাজের পরিবেশ সম্পর্কে অবহিত করি।", "service4Title": "গন্তব্যে সহযোগিতা", "service4Desc": "কর্মীরা বিদেশে পৌঁছানোর পর প্রাথমিক আবাসন এবং অন্যান্য প্রয়োজনীয় সহযোগিতা নিশ্চিত করি।", "portfolioAchievementsSectionTitle": "আমাদের অর্জন", "achievement1Label": "বছরের অভিজ্ঞতা", "achievement2Label": "সফলভাবে প্রেরিত কর্মী", "achievement3Label": "দেশে কর্মী প্রেরণ", "achievement4Label": "সফলতার হার", "portfolioGallerySectionTitle": "গ্যালারি", "portfolioGalleryImageAlt": "গ্যালারি চিত্র" },
+      "en": { "companyName": "Progress M.M. International Ltd.", "rlNumberShort": "RL-1008", "rlNumberLong": "License No.", "navHome": "Home", "navAbout": "Portfolio", "navJobs": "Jobs", "navStaff": "Office Staff", "navContact": "Contact", "heroTitle": "Your Trusted International Employment Partner", "heroSubtitle": "Approved by the Ministry of Expatriates' Welfare and Overseas Employment", "heroButton": "View Recent Job Demands", "keyInfoLicense": "Government approved recruiting agency", "keyInfoMembership": "BAIRA Membership", "keyInfoExperience": "Years of Successful Experience", "keyInfoEmbassy": "Embassy Approved Recruiting Agency", "aboutTitle": "About Us", "aboutPara1": "has long been working as one of the most trusted recruiting agencies in Bangladesh. We are committed to skill development, transparent processes, and safe migration for workers. We conduct our operations in compliance with all directives from the Ministry of Expatriates' Welfare and Overseas Employment.", "aboutPara2": "We don't just send workers; we provide all necessary support for their safe life and secure future abroad. Our motto is:", "aboutMotto": "Transparency, Professionalism, and Humanity.", "aboutImageAlt": "Progress M.M. International Ltd. Team", "clientsTitle": "Our Valued Partners", "clientsSubtitle": "We work with the world's leading companies, ensuring the best opportunities for our candidates.", "jobDemandsTitle": "Recent Job Demands & Our Fields of Work", "jobSearchPlaceholder": "Search by job title, company, or destination...", "jobDestination": "Destination", "jobQuantity": "Total Workers", "jobPersonUnit": "Persons", "jobSalary": "Salary", "jobApplyLink": "Apply for this position", "jobLoading": "Loading job list...", "jobLoadError": "There was a problem loading the job list. Please try again.", "jobLoadErrorConfig": "The website is not configured correctly. Please contact the administrator.", "jobNoJobs": "There are currently no job demands for \"{{country}}\".", "jobNoResults": "No jobs found matching your search for \"{{query}}\".", "jobConditionsTitle": "Facilities & Conditions", "jobCondition1": "Contract period is 2 years and renewable.", "jobCondition2": "Minimum passport validity must be 2 years.", "jobCondition3": "Iqama, Insurance, and Medical will be provided by the company.", "jobCondition4": "Other facilities as per Saudi Arabian labor law.", "transparencyTitle": "Transparency & Accountability", "transparencyStatsTitle": "Worker Deployment Statistics (2023-2024)", "transparencyTotalSent": "Total Workers Sent", "countrySaudi": "Saudi Arabia", "countryGCC": "Qatar, Kuwait, Oman", "countryEuropeAsia": "Europe/Asia", "transparencyNoteTitle": "Special Note", "transparencyNoteText": "A detailed list of exit clearances is published on the ministry's website.", "transparencySubAgentTitle": "Details of Recognized Sub-Agents (if any)", "transparencySubAgent1Name": "M/s Fahim Enterprise", "transparencySubAgent1Details": "Address: Mirpur, Dhaka. Contact: 01678-XXXXXX", "transparencySubAgent2Name": "Al-Amani Trading", "transparencySubAgent2Details": "Address: Chattogram. Contact: 01922-XXXXXX", "transparencySubAgentNote": "Currently, Progress M.M. International Ltd. has not appointed any sub-agents, or all activities are conducted directly through the agency.", "staffTitle": "Our Main Office Staff", "staffSubtitle": "Our professional team is committed to ensuring your safe migration.", "staffViewAll": "View All Staff", "staffViewAllAria": "View the list of all office staff", "staffResponsibility": "Responsibility", "staffPageTitle": "Our Dedicated Team", "staffBackHome": "Back to Home Page", "contactTitle": "Contact Us", "contactSubtitle": "Do not hesitate to contact us with any questions or needs. We are always ready to assist you.", "contactOfficeAddress": "Office Address", "contactAddress": "8/A, 48 Naya Paltan, (8th Floor), Dhaka-1000, Bangladesh", "contactPhone": "Phone", "contactHotline": "Hotline", "contactPhoneNumber": "+8801675237552", "contactHotlineNumber": "+8809647001260", "contactEmail": "Email", "contactTalkToUs": "Talk to Us", "contactMapTitle": "Our Office Location", "contactMessagePlaceholder": "Your message (Which country are you interested in?)", "contactSendButton": "Send Message", "contactSendingButton": "Sending...", "contactGenericError": "An error occurred. Please try again.", "contactNetworkError": "Network error. Please check your connection and try again.", "contactSuccessAlert": "Thank you, {{name}}! We have received your message.", "footerCopyright": "© {{year}} {{company}} ({{license}}). All rights reserved.", "footerCompliance": "Developed for BAIRA Compliance", "footerMinistryLink": "Ministry of Expatriates' Welfare", "formTitle": "Apply for a Job", "formLabelName": "Your Name", "formPlaceholderName": "Full Name", "formLabelEmail": "Your Email", "formPlaceholderEmail": "example@email.com", "formLabelPhone": "Phone Number", "formPlaceholderPhone": "Your mobile number", "formLabelJob": "Position of Interest", "formSelectJob": "Select a position", "formLabelResume": "Your CV/Resume (PDF, DOC, DOCX)", "formSelectFile": "Select File", "formNoFileSelected": "No file selected", "formReselectFile": "Reselect", "formMaxFileSize": "Maximum file size: 5MB.", "formLabelMessage": "Short Message (Optional)", "formPlaceholderMessage": "Write any questions or messages here...", "formSubmitButton": "Submit Application", "formAriaUploadResume": "Upload your resume", "formConfirmSubmit": "Are you sure you want to submit this application?", "formSuccessAlert": "Thank you, {{name}}! Your application for the \"{{job}}\" position has been received. We will contact you soon.", "errorFullNameRequired": "Your full name is required.", "errorEmailRequired": "Your email is required.", "errorEmailInvalid": "Please enter a valid email address.", "errorPhoneRequired": "Your phone number is required.", "errorPhoneInvalid": "Please enter a valid phone number.", "errorJobTitleRequired": "Please select a position.", "errorResumeRequired": "Uploading your CV/Resume is required.", "errorFileSize": "File size cannot exceed 5MB.", "portfolioTitle": "Our Corporate Portfolio", "portfolioSubtitle": "A journey of over a decade in transparency and professionalism", "portfolioAboutSectionTitle": "Our Profile", "portfolioAboutPara": "is a leading and government-approved international recruiting agency in Bangladesh. For over a decade, we have provided employment opportunities to thousands of Bangladeshi workers in various countries with honesty, transparency, and professionalism. Our main goal is to ensure a safe and reliable migration process for workers.", "portfolioMissionTitle": "Our Mission", "portfolioMissionDesc": "Our mission is to be a catalyst for positive change by ethically connecting Bangladesh's talented workforce with premier global opportunities. We are dedicated to empowering our workers through comprehensive training and transparent processes, ensuring their safety, well-being, and professional growth. By upholding the highest standards of integrity and contributing to the national economy through vital remittances, we strive to build a brighter future for every individual we deploy and for our nation as a whole.", "portfolioVisionTitle": "Our Vision", "portfolioVisionDesc": "Our vision is to be the undisputed leader and benchmark for excellence in international recruitment from Bangladesh. We aspire to create a future where every Bangladeshi worker is recognized globally for their skills and professionalism. Through continuous innovation, strategic partnerships with esteemed employers, and an unwavering commitment to ethical practices, we aim to be the most sought-after agency by both candidates and clients, setting new standards for quality, reliability, and social responsibility in the industry.", "portfolioLicense1Alt": "Government Recruiting License", "portfolioLicense2Alt": "Trade License", "portfolioServicesSectionTitle": "Our Services", "service1Title": "Skill Assessment & Training", "service1Desc": "We assess workers' skills and provide necessary training at international standard training centers.", "service2Title": "Visa Processing", "service2Desc": "We provide fast and accurate visa application and processing services for all countries.", "service3Title": "Pre-Departure Briefing", "service3Desc": "We inform workers about the laws, culture, and work environment of their destination country before departure.", "service4Title": "Post-Arrival Assistance", "service4Desc": "We ensure initial accommodation and other necessary support for workers after they arrive abroad.", "portfolioAchievementsSectionTitle": "Our Achievements", "achievement1Label": "Years of Experience", "achievement2Label": "Successfully Deployed Workers", "achievement3Label": "Countries Served", "achievement4Label": "Success Rate", "portfolioGallerySectionTitle": "Gallery", "portfolioGalleryImageAlt": "Gallery Image" },
+      "ar": { "companyName": "بروجرس إم إم الدولية المحدودة", "rlNumberShort": "RL-1008", "rlNumberLong": "رقم الترخيص", "navHome": "الرئيسية", "navAbout": "ملف الشركة", "navJobs": "الوظائف", "navStaff": "موظفو المكتب", "navContact": "اتصل بنا", "heroTitle": "شريكك الموثوق للتوظيف الدولي", "heroSubtitle": "معتمدة من وزارة رعاية المغتربين والتوظيف الخارجي", "heroButton": "عرض طلبات العمل الأخيرة", "keyInfoLicense": "وكالة توظيف معتمدة من الحكومة", "keyInfoMembership": "عضوية BAIRA", "keyInfoExperience": "سنوات من الخبرة الناجحة", "keyInfoEmbassy": "وكالة توظيف معتمدة من السفارة", "aboutTitle": "من نحن", "aboutPara1": "تعمل منذ فترة طويلة كواحدة من أكثر وكالات التوظيف الموثوقة في بنغلاديش. نحن ملتزمون بتنمية المهارات والعمليات الشفافة والهجرة الآمنة للعمال. نقوم بعملياتنا وفقًا لجميع توجيهات وزارة رعاية المغتربين والتوظيف الخارجي.", "aboutPara2": "نحن لا نرسل العمال فقط؛ بل نقدم كل الدعم اللازم لحياتهم الآمنة ومستقبلهم المضمون في الخارج. شعارنا هو:", "aboutMotto": "الشفافية والمهنية والإنسانية.", "aboutImageAlt": "فريق بروجرس إم إم الدولية المحدودة", "clientsTitle": "شركاؤنا الكرام", "clientsSubtitle": "نحن نعمل مع الشركات الرائدة في العالم، مما يضمن أفضل الفرص لمرشحينا.", "jobDemandsTitle": "طلبات العمل الأخيرة ومجالات عملنا", "jobSearchPlaceholder": "ابحث عن طريق المسمى الوظيفي، الشركة، أو الوجهة...", "jobDestination": "الوجهة", "jobQuantity": "إجمالي العمال", "jobPersonUnit": "أشخاص", "jobSalary": "الراتب", "jobApplyLink": "تقدم لهذه الوظيفة", "jobLoading": "جاري تحميل قائمة الوظائف...", "jobLoadError": "حدثت مشكلة في تحميل قائمة الوظائف. يرجى المحاولة مرة أخرى.", "jobLoadErrorConfig": "الموقع غير مهيأ بشكل صحيح. يرجى الاتصال بالمسؤول.", "jobNoJobs": "لا توجد حاليًا طلبات عمل لـ \"{{country}}\".", "jobNoResults": "لم يتم العثور على وظائف تطابق بحثك عن \"{{query}}\".", "jobConditionsTitle": "التسهيلات والشروط", "jobCondition1": "فترة العقد سنتان وقابلة للتجديد.", "jobCondition2": "يجب أن لا تقل صلاحية جواز السفر عن سنتين.", "jobCondition3": "سيتم توفير الإقامة والتأمين الطبي من قبل الشركة.", "jobCondition4": "التسهيلات الأخرى وفقًا لقانون العمل السعودي.", "transparencyTitle": "الشفافية والمساءلة", "transparencyStatsTitle": "إحصائيات إرسال العمال (2023-2024)", "transparencyTotalSent": "إجمالي العمال المرسلين", "countrySaudi": "المملكة العربية السعودية", "countryGCC": "قطر، الكويت، عمان", "countryEuropeAsia": "أوروبا / آسيا", "transparencyNoteTitle": "ملاحظة خاصة", "transparencyNoteText": "يتم نشر قائمة مفصلة بتصاريح الخروج على موقع الوزارة.", "transparencySubAgentTitle": "تفاصيل الوكلاء الفرعيين المعتمدين (إن وجد)", "transparencySubAgent1Name": "مؤسسة فهيم", "transparencySubAgent1Details": "العنوان: ميربور، دكا. الاتصال: 01678-XXXXXX", "transparencySubAgent2Name": "الأماني للتجارة", "transparencySubAgent2Details": "العنوان: شيتاغونغ. الاتصال: 01922-XXXXXX", "transparencySubAgentNote": "حاليًا، لم تعين شركة بروجرس إم إم الدولية المحدودة أي وكلاء فرعيين، أو تتم جميع الأنشطة مباشرة من خلال الوكالة.", "staffTitle": "موظفو مكتبنا الرئيسي", "staffSubtitle": "فريقنا المحترف ملتزم بضمان هجرتك الآمنة.", "staffViewAll": "عرض كل الموظفين", "staffViewAllAria": "عرض قائمة جميع موظفي المكتب", "staffResponsibility": "المسؤولية", "staffPageTitle": "فريقنا المتفاني", "staffBackHome": "العودة إلى الصفحة الرئيسية", "contactTitle": "اتصل بنا", "contactSubtitle": "لا تتردد في الاتصال بنا لأية أسئلة أو احتياجات. نحن دائما على استعداد لمساعدتك.", "contactOfficeAddress": "عنوان المكتب", "contactAddress": "٨/أ، ٤٨ نايا بلتان، (الطابق الثامن)، دكا-١٠٠٠، بنغلاديش", "contactPhone": "الهاتف", "contactHotline": "الخط الساخن", "contactPhoneNumber": "٨٨٠١٦٧٥٢٣٧٥٥٢+", "contactHotlineNumber": "٨٨٠٩٦٤٧٠٠١٢٦٠+", "contactEmail": "البريد الإلكتروني", "contactTalkToUs": "تحدث إلينا", "contactMapTitle": "موقع مكتبنا", "contactMessagePlaceholder": "رسالتك (ما البلد الذي تهتم به؟)", "contactSendButton": "إرسال الرسالة", "contactSendingButton": "جار الإرسال...", "contactGenericError": "حدث خطأ. يرجى المحاولة مرة أخرى.", "contactNetworkError": "خطأ في الشبكة. يرجى التحقق من اتصالك والمحاولة مرة أخرى.", "contactSuccessAlert": "شكرًا لك، {{name}}! لقد تلقينا رسالتك.", "footerCopyright": "© {{year}} {{company}} ({{license}}). كل الحقوق محفوظة.", "footerCompliance": "تم التطوير للامتثال لـ BAIRA", "footerMinistryLink": "وزارة رعاية المغتربين", "formTitle": "تقدم لوظيفة", "formLabelName": "اسمك", "formPlaceholderName": "الاسم الكامل", "formLabelEmail": "بريدك الإلكتروني", "formPlaceholderEmail": "example@email.com", "formLabelPhone": "رقم الهاتف", "formPlaceholderPhone": "رقم هاتفك المحمول", "formLabelJob": "الوظيفة المطلوبة", "formSelectJob": "اختر وظيفة", "formLabelResume": "سيرتك الذاتية (PDF, DOC, DOCX)", "formSelectFile": "اختر ملف", "formNoFileSelected": "لم يتم اختيار أي ملف", "formReselectFile": "إعادة التحديد", "formMaxFileSize": "الحد الأقصى لحجم الملف: 5 ميغابايت.", "formLabelMessage": "رسالة قصيرة (اختياري)", "formPlaceholderMessage": "اكتب أي أسئلة أو رسائل هنا...", "formSubmitButton": "إرسال الطلب", "formAriaUploadResume": "قم بتحميل سيرتك الذاتية", "formConfirmSubmit": "هل أنت متأكد من أنك تريد تقديم هذا الطلب؟", "formSuccessAlert": "شكرًا لك، {{name}}! لقد تم استلام طلبك لوظيفة \"{{job}}\". سنتصل بك قريبًا.", "errorFullNameRequired": "اسمك الكامل مطلوب.", "errorEmailRequired": "بريدك الإلكتروني مطلوب.", "errorEmailInvalid": "الرجاء إدخال عنوان بريد إلكتروني صالح.", "errorPhoneRequired": "رقم هاتفك مطلوب.", "errorPhoneInvalid": "الرجاء إدخال رقم هاتف صالح.", "errorJobTitleRequired": "الرجاء اختيار وظيفة.", "errorResumeRequired": "مطلوب تحميل سيرتك الذاتية.", "errorFileSize": "لا يمكن أن يتجاوز حجم الملف 5 ميغابايت.", "portfolioTitle": "ملفنا التعريفي للشركة", "portfolioSubtitle": "رحلة لأكثر من عقد في الشفافية والمهنية", "portfolioAboutSectionTitle": "ملفنا الشخصي", "portfolioAboutPara": "هي وكالة توظيف دولية رائدة ومعتمدة من الحكومة في بنغلاديش. لأكثر من عقد من الزمان، قمنا بتوفير فرص عمل لآلاف العمال البنغلاديشيين في مختلف البلدان بأمانة وشفافية ومهنية. هدفنا الرئيسي هو ضمان عملية هجرة آمنة وموثوقة للعمال.", "portfolioMissionTitle": "مهمتنا", "portfolioMissionDesc": "مهمتنا هي أن نكون حافزًا للتغيير الإيجابي من خلال ربط القوى العاملة الموهوبة في بنغلاديش بالفرص العالمية المتميزة بشكل أخلاقي. نحن ملتزمون بتمكين عمالنا من خلال التدريب الشامل والعمليات الشفافة، مما يضمن سلامتهم ورفاهيتهم ونموهم المهني. من خلال الحفاظ على أعلى معايير النزاهة والمساهمة في الاقتصاد الوطني عبر التحويلات الحيوية، فإننا نسعى جاهدين لبناء مستقبل أكثر إشراقًا لكل فرد نرسله ولأمتنا ككل.", "portfolioVisionTitle": "رؤيتنا", "portfolioVisionDesc": "رؤيتنا هي أن نكون الشركة الرائدة بلا منازع ومعيارًا للتميز في التوظيف الدولي من بنغلادياديش. نطمح إلى خلق مستقبل يُعترف فيه بكل عامل بنغلاديشي على مستوى العالم لمهاراته واحترافيته. من خلال الابتكار المستمر، والشراكات الاستراتيجية مع أصحاب العمل الموقرين، والالتزام الثابت بالممارسات الأخلاقية، نهدف إلى أن نكون الوكالة الأكثر طلبًا من قبل المرشحين والعملاء على حد سواء، واضعين معايير جديدة للجودة والموثوقية والمسؤولية الاجتماعية في هذا المجال.", "portfolioLicense1Alt": "رخصة توظيف حكومية", "portfolioLicense2Alt": "رخصة تجارية", "portfolioServicesSectionTitle": "خدماتنا", "service1Title": "تقييم المهارات والتدريب", "service1Desc": "نقوم بتقييم مهارات العمال وتوفير التدريب اللازم في مراكز تدريب ذات معايير دولية.", "service2Title": "معالجة التأشيرات", "service2Desc": "نحن نقدم خدمات طلب ومعالجة التأشيرات بسرعة ودقة لجميع البلدان.", "service3Title": "إحاطة ما قبل المغادرة", "service3Desc": "نقوم بإبلاغ العمال بقوانين وثقافة وبيئة العمل في بلد وجهتهم قبل المغادرة.", "service4Title": "المساعدة بعد الوصول", "service4Desc": "نحن نضمن الإقامة الأولية والدعم الضروري الآخر للعمال بعد وصولهم إلى الخارج.", "portfolioAchievementsSectionTitle": "إنجازاتنا", "achievement1Label": "سنوات من الخبرة", "achievement2Label": "عمال تم إرسالهم بنجاح", "achievement3Label": "بلدان مخدومة", "achievement4Label": "معدل النجاح", "portfolioGallerySectionTitle": "المعرض", "portfolioGalleryImageAlt": "صورة من المعرض" }
+    }
+    </script>
+    
+    <script nomodule>
+        alert("This application requires a modern browser with JavaScript modules support.");
+    </script>
+    <script type="module">
+        // --- START OF INLINED SCRIPT ---
+        const rootElement = document.getElementById('root');
+        if (!rootElement) {
+            throw new Error("Could not find root element");
+        }
+
+        // --- DATA AND CONSTANTS ---
+        const TRANSLATIONS = JSON.parse(document.getElementById('translations-data').textContent);
+        const COUNTRIES = [
+          { id: 'all', name: { bn: 'সকল চাহিদা', en: 'All Demands', ar: 'كل الطلبات' } },
+          { id: 'saudi', name: { bn: 'সৌদি আরব', en: 'Saudi Arabia', ar: 'المملكة العربية السعودية' } },
+          { id: 'qatar', name: { bn: 'কাতার', en: 'Qatar', ar: 'قطر' } },
+          { id: 'malaysia', name: { bn: 'মালয়েশিয়া', en: 'Malaysia', ar: 'ماليزيا' } },
+          { id: 'japan', name: { bn: 'জাপান', en: 'Japan', ar: 'اليابان' } },
+        ];
+        const JOB_DEMANDS = [
+          { role: { bn: 'সিটি ক্লিনার', en: 'City Cleaner', ar: 'عامل نظافة مدينة' }, company: { bn: 'আল ফাহাদ কোং', en: 'Al Fahad Co.', ar: 'شركة الفهد' }, destination: { bn: 'সৌদি আরব', en: 'Saudi Arabia', ar: 'المملكة العربية السعودية' }, quantity: 50, salary: { bn: '৮০০+২০০ SAR + থাকা', en: '800+200 SAR + Accommodation', ar: '٨٠٠+٢٠٠ ريال سعودي + سكن' }, imageUrl: 'https://i.imgur.com/LWAbD7e.jpeg' },
+          { role: { bn: 'সিটি ক্লিনার', en: 'City Cleaner', ar: 'عامل نظافة مدينة' }, company: { bn: 'আল হুকামা কোম্পানী', en: 'Al Hukama Company', ar: 'شركة الحكماء' }, destination: { bn: 'সৌদি আরব', en: 'Saudi Arabia', ar: 'المملكة العربية السعودية' }, quantity: 50, salary: { bn: '৮০০+২০০ SAR + থাকা', en: '800+200 SAR + Accommodation', ar: '٨٠٠+٢٠٠ ريال سعودي + سكن' }, imageUrl: 'https://i.imgur.com/S2OgjmX.jpeg' },
+          { role: { bn: 'সিটি ক্লিনার', en: 'City Cleaner', ar: 'عامل نظافة مدينة' }, company: { bn: 'আল তুর্কি কোম্পানী', en: 'Al Turki Company', ar: 'شركة التركي' }, destination: { bn: 'সৌদি আরব', en: 'Saudi Arabia', ar: 'المملكة العربية السعودية' }, quantity: 50, salary: { bn: '৬০০ SAR + থাকা', en: '600 SAR + Accommodation', ar: '٦٠٠ ريال سعودي + سكن' }, imageUrl: 'https://picsum.photos/seed/alturki/400/250' },
+          { role: { bn: 'ফুয়েল ফিলার', en: 'Fuel Filler', ar: 'عامل تعبئة وقود' }, company: { bn: 'আল এস পেট্রোল পাম্প', en: 'Al S Petrol Pump', ar: 'محطة بترول آل إس' }, destination: { bn: 'সৌদি আরব', en: 'Saudi Arabia', ar: 'المملكة العربية السعودية' }, quantity: 25, salary: { bn: '১১০০ SAR + থাকা', en: '1100 SAR + Accommodation', ar: '١١٠٠ ريال سعودي + سكن' }, imageUrl: 'https://picsum.photos/seed/alspetrol/400/250' },
+          { role: { bn: 'সিটি ক্লিনার', en: 'City Cleaner', ar: 'عامل نظافة مدينة' }, company: { bn: 'শারিকাত মাকায়াজ', en: 'Sharikat Makayaj Co.', ar: 'شركة مكياج' }, destination: { bn: 'সৌদি আরব', en: 'Saudi Arabia', ar: 'المملكة العربية السعودية' }, quantity: 100, salary: { bn: '৬০০ SAR + থাকা', en: '600 SAR + Accommodation', ar: '٦٠٠ ريال سعودي + سكن' }, imageUrl: 'https://picsum.photos/seed/makayaj/400/250' },
+          { role: { bn: 'ক্লিনার', en: 'Cleaner', ar: 'عامل نظافة' }, company: { bn: 'আল মাজন কোম্পানী', en: 'Al Majan Company', ar: 'شركة الماجن' }, destination: { bn: 'সৌদি আরব', en: 'Saudi Arabia', ar: 'المملكة العربية السعودية' }, quantity: 80, salary: { bn: '৫০০ SAR + থাকা', en: '500 SAR + Accommodation', ar: '٥٠٠ ريال سعودي + سكن' }, imageUrl: 'https://picsum.photos/seed/almajan/400/250' },
+          { role: { bn: 'ইনডোর/আউটডোর ক্লিনার', en: 'Indoor/Outdoor Cleaner', ar: 'عامل نظافة داخلي/خارجي' }, company: { bn: 'আল জোরাইসি', en: 'Al Joraisi Co.', ar: 'الجريسي' }, destination: { bn: 'সৌদি আরব', en: 'Saudi Arabia', ar: 'المملكة العربية السعودية' }, quantity: 70, salary: { bn: '১০০০ SAR + থাকা', en: '1000 SAR + Accommodation', ar: '١٠٠٠ ريال سعودي + سكن' }, imageUrl: 'https://picsum.photos/seed/aljoraisi/400/250' },
+          { role: { bn: 'ডিশেস ক্লিনার', en: 'Dishes Cleaner', ar: 'عامل غسيل صحون' }, company: { bn: 'বিন সামার কোম্পানী', en: 'Bin Samar Company', ar: 'شركة بن سمار' }, destination: { bn: 'সৌদি আরব', en: 'Saudi Arabia', ar: 'المملكة العربية السعودية' }, quantity: 30, salary: { bn: '৮০০ SAR + থাকা ও ২ বেলা খাবার', en: '800 SAR + Accommodation & 2 Meals', ar: '٨٠٠ ريال سعودي + سكن ووجبتان' }, imageUrl: 'https://picsum.photos/seed/binsamar/400/250' },
+          { role: { bn: 'ম্যান লিফট্‌ অপারেটর', en: 'Man Lift Operator', ar: 'مشغل رافعة أفراد' }, company: { bn: 'এডভান্স লিজিক', en: 'Advance Logic Co.', ar: 'أدفانس لوجيك' }, destination: { bn: 'সৌদি আরব', en: 'Saudi Arabia', ar: 'المملكة العربية السعودية' }, quantity: 15, salary: { bn: '১২০০+৩০০ SAR + থাকা', en: '1200+300 SAR + Accommodation', ar: '١٢٠٠+٣٠٠ ريال سعودي + سكن' }, imageUrl: 'https://picsum.photos/seed/advancelogic/400/250' },
+          { role: { bn: 'গভ. অফিস ক্লিনার', en: 'Govt. Office Cleaner', ar: 'عامل نظافة مكتب حكومي' }, company: { bn: 'আল-হাসাম', en: 'Al-Hasam Co.', ar: 'الحصام' }, destination: { bn: 'সৌদি আরব', en: 'Saudi Arabia', ar: 'المملكة العربية السعودية' }, quantity: 40, salary: { bn: '৭০০ SAR + থাকা', en: '700 SAR + Accommodation', ar: '٧٠٠ ريال سعودي + سكن' }, imageUrl: 'https://picsum.photos/seed/alhasam/400/250' },
+          { role: { bn: 'নির্মাণ শ্রমিক', en: 'Construction Worker', ar: 'عامل بناء' }, destination: { bn: 'সৌদি আরব', en: 'Saudi Arabia', ar: 'المملكة العربية السعودية' }, quantity: 300, salary: { bn: '১৬০০ SAR + ওভারটাইম', en: '1600 SAR + Overtime', ar: '١٦٠٠ ريال سعودي + اضافي' }, imageUrl: 'https://picsum.photos/seed/construction/400/250' },
+          { role: { bn: 'সেফটি সুপারভাইজার', en: 'Safety Supervisor', ar: 'مشرف سلامة' }, destination: { bn: 'কাতার', en: 'Qatar', ar: 'قطر' }, quantity: 50, salary: { bn: '৩২০০ QAR + বাসস্থান', en: '3200 QAR + Accommodation', ar: '٣٢٠٠ ريال قطري + سكن' }, imageUrl: 'https://picsum.photos/seed/safety/400/250' },
+          { role: { bn: 'নার্স (মহিলা)', en: 'Female Nurse', ar: 'ممرضة' }, destination: { bn: 'জাপান', en: 'Japan', ar: 'اليابان' }, quantity: 20, salary: { bn: 'আলোচনা সাপেক্ষে (উচ্চ)', en: 'Negotiable (High)', ar: 'قابل للتفاوض (مرتفع)' }, imageUrl: 'https://picsum.photos/seed/nurse/400/250' },
+          { role: { bn: 'প্ল্যান্টেশন ওয়ার্কার', en: 'Plantation Worker', ar: 'عامل مزارع' }, destination: { bn: 'মালয়েশিয়া', en: 'Malaysia', ar: 'ماليزيا' }, quantity: 500, salary: { bn: '১৫০০ MYR + থাকা', en: '1500 MYR + Accommodation', ar: '١٥٠٠ رينغيت ماليزي + سكن' }, imageUrl: 'https://picsum.photos/seed/plantation/400/250' },
+          { role: { bn: 'ক্লিনার', en: 'Cleaner', ar: 'عامل نظافة' }, destination: { bn: 'কাতার', en: 'Qatar', ar: 'قطر' }, quantity: 150, salary: { bn: '১২০০ QAR + থাকা ও খাওয়া', en: '1200 QAR + Food & Accommodation', ar: '١٢٠٠ ريال قطري + سكن وطعام' }, imageUrl: 'https://picsum.photos/seed/cleaner/400/250' },
+          { role: { bn: 'ড্রাইভার', en: 'Driver', ar: 'سائق' }, destination: { bn: 'সৌদি আরব', en: 'Saudi Arabia', ar: 'المملكة العربية السعودية' }, quantity: 100, salary: { bn: '১৮০০ SAR + বাসস্থান', en: '1800 SAR + Accommodation', ar: '١٨٠٠ ريال سعودي + سكن' }, imageUrl: 'https://picsum.photos/seed/driver/400/250' },
+        ];
+        const STAFF_MEMBERS = [
+          { name: { bn: 'জুবায়ের হায়দার মজুমদার', en: 'Jubayer Haider Mojumder', ar: 'زبیر حیدر মজুমদার' }, position: { bn: 'ম্যানেজিং ডিরেক্টর', en: 'Managing Director', ar: 'المدير العام' }, positionEn: 'MD', responsibility: { bn: 'বৈদেশিক চুক্তি ও কৌশলগত দিকনির্দেশনা।', en: 'Foreign contracts and strategic direction.', ar: 'العقود الخارجية والتوجيه الاستراتيجي.' }, imgPlaceholder: 'MD', imageUrl: 'https://i.imgur.com/esJDWhj.jpeg' },
+          { name: { bn: 'নিশো খান', en: 'Nisho Khan', ar: 'نيشو خان' }, position: { bn: 'জেনারেল ম্যানেজার', en: 'General Manager', ar: 'مدير عام' }, positionEn: 'GM', responsibility: { bn: 'অভ্যন্তরীণ কার্যক্রম ও কর্মী নির্বাচন।', en: 'Internal operations and staff selection.', ar: 'العمليات الداخلية واختيار الموظفين.' }, imgPlaceholder: 'MGR', imageUrl: 'https://i.imgur.com/qIKJTHh.jpeg' },
+          { name: { bn: 'আবুল কালাম আজাদ', en: 'Abul Kalam Azad', ar: 'أبو الكلام آزاد' }, position: { bn: 'আইটি, ইঞ্জিনিয়ার, এম্বাসী প্রতিনিধী, ম্যানপাওয়ার প্রতিনিধী ও ডাটাবেজ কর্মকর্তা', en: 'IT, Engineer, Embassy & Manpower Representative, Database Officer', ar: 'مسؤول تقنية المعلومات، مهندس، وممثل السفارة والقوى العاملة' }, positionEn: 'IT', responsibility: { bn: 'এম্বাসী ও ম্যানপাওয়ার এর সকল কাজ।', en: 'Handles all Embassy and Manpower related tasks.', ar: 'يتولى جميع المهام المتعلقة بالسفارة والقوى العاملة.' }, imgPlaceholder: 'IT', imageUrl: 'https://i.imgur.com/5xphxtP.jpeg' },
+          { name: { bn: 'মোঃ শাহরিন আহমেদ শিহাত', en: 'Md Shaharin Ahmed Shihat', ar: 'محمد شاهين أحمد شيهات' }, position: { bn: 'অফিস এক্সিকিউটিভ', en: 'Office Executive', ar: 'تنفيذي مكتب' }, positionEn: 'OE', responsibility: { bn: 'অফিসের প্রশাসনিক কাজ পরিচালনা করেন।', en: 'Handles office administrative tasks.', ar: 'يتولى المهام الإدارية للمكتب.' }, imgPlaceholder: 'OE', imageUrl: 'https://i.imgur.com/hcEmyKo.jpeg' },
+          { name: { bn: 'নাজমুল হাওলাদার', en: 'Najmun Haulader', ar: 'نجمون هولادر' }, position: { bn: 'অফিস সহকারী', en: 'Office Assistant', ar: 'مساعد مكتب' }, positionEn: 'OA', responsibility: { bn: 'অফিসের সব কাজ।', en: 'General office duties.', ar: 'واجبات المكتب العامة.' }, imgPlaceholder: 'OA', imageUrl: 'https://i.imgur.com/93Ny2Gb.jpeg' },
+        ];
+        const CLIENT_LOGOS = [
+          { name: 'Almarai', logoUrl: 'https://i.imgur.com/mcRk5BF.jpeg' },
+          { name: 'Saudi Aramco', logoUrl: 'https://i.imgur.com/lDw09J0.jpeg' },
+          { name: 'Qatar Airways', logoUrl: 'https://i.imgur.com/RuKfjGo.jpeg' },
+          { name: 'Emirates', logoUrl: 'https://i.imgur.com/NnPMxdd.jpeg' },
+          { name: 'Bin Ghara General Contracting Company', logoUrl: 'https://i.imgur.com/6ha4lwG.jpeg' },
+          { name: 'Nesma & Partners', logoUrl: 'https://i.imgur.com/bT8zBND.png' },
+          { name: 'Al Majal Alarabi', logoUrl: 'https://i.imgur.com/9DrXAdl.jpeg' },
+          { name: 'Binladin Group', logoUrl: 'https://i.imgur.com/t2QI7sn.gif' },
+        ];
+
+
+        // --- STATE MANAGEMENT ---
+        let state = {
+            locale: localStorage.getItem('locale') || 'en',
+            currentPage: 'main',
+            jobFilter: 'all',
+            searchQuery: '',
+            formData: JSON.parse(localStorage.getItem('jobApplicationFormData') || '{}'),
+            formErrors: {},
+        };
+
+        // --- CORE APPLICATION LOGIC ---
+        
+        function t(key, replacements) {
+            const translation = TRANSLATIONS[state.locale]?.[key] || key;
+            if (replacements) {
+                return Object.entries(replacements).reduce((acc, [k, v]) => {
+                    return acc.replace(`{{${k}}}`, String(v));
+                }, translation);
+            }
+            return translation;
+        }
+        
+        function navigate(page) {
+            state.currentPage = page;
+            window.scrollTo(0, 0);
+            render();
+        }
+
+        function setLocale(newLocale) {
+            state.locale = newLocale;
+            localStorage.setItem('locale', newLocale);
+            document.documentElement.lang = newLocale;
+            document.documentElement.dir = newLocale === 'ar' ? 'rtl' : 'ltr';
+            render();
+        }
+
+        // --- TEMPLATE/COMPONENT FUNCTIONS ---
+
+        const Header = () => `
+            <header class="bg-sky-900 shadow-lg sticky top-0 z-50">
+              <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-20">
+                  <div class="flex items-center cursor-pointer" onclick="window.app.navigate('main')">
+                    <h1 class="text-xl md:text-2xl font-bold text-white tracking-wider">${t('companyName')}</h1>
+                    <span class="px-3 py-1 bg-yellow-400 text-sky-900 text-xs font-semibold rounded-full hidden sm:inline-block ${state.locale === 'ar' ? 'mr-4' : 'ml-4'}">${t('rlNumberShort')}</span>
+                  </div>
+                  <div class="flex items-center">
+                    <nav class="hidden md:flex space-x-8">
+                      <a href="#" onclick="window.app.navigate('main')" class="text-white hover:text-yellow-400 transition duration-300 font-medium">${t('navHome')}</a>
+                      <a href="#" onclick="window.app.navigate('portfolio')" class="text-white hover:text-yellow-400 transition duration-300 font-medium">${t('navAbout')}</a>
+                      <a href="#" onclick="window.app.navigate('jobs')" class="text-white hover:text-yellow-400 transition duration-300 font-medium">${t('navJobs')}</a>
+                      <a href="#" onclick="window.app.navigate('staff')" class="text-white hover:text-yellow-400 transition duration-300 font-medium">${t('navStaff')}</a>
+                      <a href="#" onclick="window.app.navigate('contact')" class="text-white hover:text-yellow-400 transition duration-300 font-medium">${t('navContact')}</a>
+                    </nav>
+                    ${LanguageSwitcher()}
+                  </div>
+                </div>
+              </div>
+            </header>
+        `;
+
+        const PageHeader = (title) => `
+            <header class="bg-sky-900 shadow-lg sticky top-0 z-50">
+              <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-20">
+                  <div class="flex items-center cursor-pointer" onclick="window.app.navigate('main')">
+                    <h1 class="text-xl md:text-2xl font-bold text-white tracking-wider">${t('companyName')}</h1>
+                    <span class="px-3 py-1 bg-yellow-400 text-sky-900 text-xs font-semibold rounded-full hidden sm:inline-block ${state.locale === 'ar' ? 'mr-4' : 'ml-4'}">${t('rlNumberShort')}</span>
+                  </div>
+                  <nav>
+                     <button onclick="window.app.navigate('main')" class="text-white hover:text-yellow-400 transition duration-300 font-medium px-4 py-2 rounded-md hover:bg-sky-800">
+                        ${t('navHome')}
+                     </button>
+                  </nav>
+                </div>
+              </div>
+            </header>
+        `;
+        
+        const LanguageSwitcher = () => {
+            const languages = [ { code: 'bn', name: 'বাংলা' }, { code: 'en', name: 'English' }, { code: 'ar', name: 'العربية' } ];
+            return `
+            <div class="flex items-center ltr:ml-6 rtl:mr-6 bg-sky-800 p-1 rounded-lg border border-sky-700">
+                ${languages.map(lang => `
+                    <button
+                        onclick="window.app.setLocale('${lang.code}')"
+                        class="px-3 py-1 text-sm font-medium rounded-md transition-colors duration-200 focus:outline-none ${ state.locale === lang.code ? 'bg-yellow-400 text-sky-900 shadow-sm' : 'text-white hover:bg-sky-700' }">
+                        ${lang.name}
+                    </button>
+                `).join('')}
+            </div>`;
+        };
+        
+        const Footer = () => `
+            <footer class="bg-gray-800 text-white py-8">
+              <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <p class="text-sm">${t('footerCopyright', { year: new Date().getFullYear(), company: t('companyName'), license: t('rlNumberShort') })}</p>
+                <p class="text-xs mt-2 text-gray-400">
+                  ${t('footerCompliance')} | <strong>${t('rlNumberLong')}: RL-1008</strong> | <a href="https://probashi.gov.bd" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-400">${t('footerMinistryLink')}</a>
+                </p>
+              </div>
+            </footer>
+        `;
+
+        // --- PAGES ---
+
+        const MainPage = () => `
+            <div data-page="main" class="bg-gray-50">
+                ${Header()}
+                <main>
+                    <section id="home" class="hero-bg h-[400px] sm:h-[500px] flex items-center justify-center text-center">
+                      <div class="z-10 p-4">
+                        <h2 class="text-3xl sm:text-5xl font-extrabold text-white mb-4 text-shadow-custom">${t('heroTitle')}</h2>
+                        <p class="text-lg sm:text-xl text-yellow-300 mb-8 text-shadow-custom">${t('heroSubtitle')}</p>
+                        <a href="#" onclick="window.app.navigate('jobs')" class="bg-yellow-500 hover:bg-yellow-600 text-sky-900 font-bold py-3 px-8 rounded-lg shadow-xl transition duration-300 transform hover:scale-105">${t('heroButton')}</a>
+                      </div>
+                    </section>
+                    <section class="py-12 bg-white shadow-inner">
+                      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                          ${['RL-1008', 'BAIRA', '15+', 'Saudi Arabia'].map((val, i) => `
+                            <div class="p-6 bg-sky-50 rounded-xl shadow-md border-b-4 border-sky-600 transform hover:-translate-y-2 transition-transform duration-300 h-full flex flex-col justify-center">
+                              <p class="text-4xl font-extrabold text-sky-900">${val}</p>
+                              <p class="mt-2 text-gray-600">${t(`keyInfo${['License', 'Membership', 'Experience', 'Embassy'][i]}`)}</p>
+                            </div>
+                          `).join('')}
+                        </div>
+                      </div>
+                    </section>
+                    <section id="about" class="py-16">
+                      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <h2 class="text-4xl font-bold text-sky-900 mb-8 border-b-4 border-yellow-500 inline-block pb-2">${t('aboutTitle')}</h2>
+                        <div class="flex flex-col md:flex-row gap-8 items-center">
+                          <div class="md:w-1/2">
+                            <p class="text-lg text-gray-700 leading-relaxed mb-4 text-justify"><strong>${t('companyName')} (${t('rlNumberShort')})</strong> ${t('aboutPara1')}</p>
+                            <p class="text-lg text-gray-700 leading-relaxed text-justify">${t('aboutPara2')} <strong>${t('aboutMotto')}</strong></p>
+                          </div>
+                          <div class="md:w-1/2"><img src="https://i.imgur.com/QYipDn0.jpeg" alt="${t('aboutImageAlt')}" class="rounded-xl shadow-2xl object-cover w-full h-80" /></div>
+                        </div>
+                      </div>
+                    </section>
+                    <section id="clients" class="py-16 bg-gray-50">
+                      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <h2 class="text-4xl font-bold text-sky-900 mb-10 text-center">${t('clientsTitle')}</h2>
+                        <p class="text-center text-lg text-gray-600 mb-12 max-w-3xl mx-auto">${t('clientsSubtitle')}</p>
+                        <div class="flex flex-wrap justify-center items-start gap-x-16 sm:gap-x-20 gap-y-16">
+                          ${CLIENT_LOGOS.map(client => `
+                            <div class="group flex flex-col items-center gap-4 text-center w-40 transition-transform duration-300 hover:scale-105" title="${client.name}">
+                              <img src="${client.logoUrl}" alt="${client.name}" class="h-20 sm:h-24 object-contain" />
+                              <p class="text-base font-medium text-gray-700 group-hover:text-sky-800">${client.name}</p>
+                            </div>
+                          `).join('')}
+                        </div>
+                      </div>
+                    </section>
+                </main>
+                ${Footer()}
+            </div>
+        `;
+        
+        const JobsPage = () => {
+             const JobCard = (job) => `
+                <div class="bg-white rounded-xl shadow-lg border-t-4 border-green-500 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col overflow-hidden">
+                    <img src="${job.imageUrl}" alt="${job.role[state.locale]}" class="w-full h-48 object-cover" />
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-gray-800">${job.role[state.locale]}</h3>
+                        ${job.company ? `<p class="text-md font-semibold text-sky-700 mb-2">${job.company[state.locale]}</p>` : ''}
+                        <p class="text-gray-600 mb-1">${t('jobDestination')}: ${job.destination[state.locale]}</p>
+                        <p class="text-gray-600 mb-4">${t('jobQuantity')}: ${job.quantity} ${t('jobPersonUnit')} | ${t('jobSalary')}: ${job.salary[state.locale]}</p>
+                        <div class="mt-auto pt-4 border-t border-gray-200">
+                           <h4 class="font-bold text-gray-700 mb-2">${t('jobConditionsTitle')}</h4>
+                           <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+                               <li>${t('jobCondition1')}</li>
+                               <li>${t('jobCondition2')}</li>
+                               <li>${t('jobCondition3')}</li>
+                               <li>${t('jobCondition4')}</li>
+                           </ul>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            let filteredJobs = JOB_DEMANDS;
+            if (state.jobFilter !== 'all') {
+                const selectedCountry = COUNTRIES.find(c => c.id === state.jobFilter);
+                if (selectedCountry) {
+                    filteredJobs = JOB_DEMANDS.filter(job => job.destination.en === selectedCountry.name.en);
+                }
+            }
+            if (state.searchQuery.trim()) {
+                const lq = state.searchQuery.toLowerCase();
+                filteredJobs = filteredJobs.filter(job =>
+                    job.role[state.locale].toLowerCase().includes(lq) ||
+                    job.destination[state.locale].toLowerCase().includes(lq) ||
+                    (job.company && job.company[state.locale].toLowerCase().includes(lq))
+                );
+            }
+
+            return `
+            <div data-page="jobs" class="bg-gray-50 min-h-screen flex flex-col">
+                ${PageHeader('Jobs')}
+                <main>
+                    <section id="demands" class="py-16 bg-sky-50">
+                      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <h2 class="text-4xl font-bold text-sky-900 mb-4 text-center">${t('jobDemandsTitle')}</h2>
+                        <div class="max-w-xl mx-auto mb-10">
+                          <div class="relative">
+                            <div class="absolute inset-y-0 ltr:left-0 rtl:right-0 flex items-center pl-3 pointer-events-none">
+                              <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                            </div>
+                            <input type="search" value="${state.searchQuery}" oninput="window.app.updateSearch(this.value)" placeholder="${t('jobSearchPlaceholder')}" class="w-full p-4 ltr:pl-10 rtl:pr-10 text-lg border border-gray-300 rounded-full shadow-sm focus:ring-sky-500 focus:border-sky-500" />
+                          </div>
+                        </div>
+                        <div class="flex flex-wrap justify-center gap-4 mb-12">
+                            ${COUNTRIES.map(country => `
+                                <button onclick="window.app.updateFilter('${country.id}')" class="px-6 py-2 rounded-full font-semibold shadow-md cursor-pointer transition-colors duration-300 ${state.jobFilter === country.id ? 'bg-sky-900 text-white' : 'bg-white text-sky-900 border border-sky-900 hover:bg-sky-100'}">
+                                    ${country.name[state.locale]}
+                                </button>
+                            `).join('')}
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                           ${filteredJobs.length > 0 ? filteredJobs.map(JobCard).join('') : `<p class="text-center text-gray-600 md:col-span-2 lg:col-span-3">${t('jobNoResults', { query: state.searchQuery })}</p>`}
+                        </div>
+                      </div>
+                    </section>
+                </main>
+                ${Footer()}
+            </div>
+            `;
+        };
+        
+        const StaffPage = () => {
+             const StaffCard = (member) => `
+                <div class="bg-white text-gray-900 p-6 rounded-xl shadow-2xl text-center transform hover:-translate-y-2 transition-transform duration-300 h-full flex flex-col justify-start">
+                    <img src="${member.imageUrl || `https://placehold.co/100x100/fec31a/0c4a6e?text=${member.imgPlaceholder}`}" alt="${member.name[state.locale]}" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-yellow-400" />
+                    <h3 class="text-xl font-bold">${member.name[state.locale]}</h3>
+                    <p class="text-sky-700 font-semibold">${member.position[state.locale]}${state.locale !== 'en' ? ` (${member.position.en})` : ''}</p>
+                    <p class="text-sm mt-2 text-gray-600 flex-grow">${t('staffResponsibility')}: ${member.responsibility[state.locale]}</p>
+                </div>
+            `;
+            return `
+            <div data-page="staff" class="bg-gray-50 min-h-screen flex flex-col">
+                ${PageHeader('Staff')}
+                <main class="flex-grow">
+                  <div class="relative bg-cover bg-center h-80 flex items-center justify-center text-center" style="background-image: url('https://i.imgur.com/ttvTVes.jpeg')">
+                    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+                    <div class="relative z-10 p-4">
+                      <h1 class="text-5xl font-extrabold text-white text-shadow-custom">${t('staffPageTitle')}</h1>
+                    </div>
+                  </div>
+                  <div class="py-16">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                        <p class="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">${t('staffSubtitle')}</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                            ${STAFF_MEMBERS.map(StaffCard).join('')}
+                        </div>
+                    </div>
+                  </div>
+                </main>
+                ${Footer()}
+            </div>
+            `;
+        };
+        
+        const PortfolioPage = () => {
+             const Section = (title, content, className = '') => `
+                <section class="py-12 ${className}">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <h2 class="text-4xl font-bold text-sky-900 mb-8 border-b-4 border-yellow-500 inline-block pb-2">${title}</h2>
+                        ${content}
+                    </div>
+                </section>
+            `;
+            const services = [
+                { title: t('service1Title'), description: t('service1Desc'), icon: "🔧" }, { title: t('service2Title'), description: t('service2Desc'), icon: "📄" },
+                { title: t('service3Title'), description: t('service3Desc'), icon: "✈️" }, { title: t('service4Title'), description: t('service4Desc'), icon: "🤝" },
+            ];
+            return `
+            <div data-page="portfolio" class="bg-gray-50 min-h-screen flex flex-col">
+                ${PageHeader('Portfolio')}
+                <main>
+                    <div class="bg-sky-800 text-white py-16 text-center">
+                         <h1 class="text-5xl font-extrabold">${t('portfolioTitle')}</h1>
+                         <p class="mt-4 text-xl text-sky-200">${t('portfolioSubtitle')}</p>
+                    </div>
+                    ${Section(t('portfolioAboutSectionTitle'), `
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                            <div class="text-lg text-gray-700 leading-relaxed space-y-4">
+                                <p><strong>${t('companyName')} (${t('rlNumberShort')})</strong> ${t('portfolioAboutPara')}</p>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-6">
+                                    <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-sky-500">
+                                       <h3 class="text-2xl font-bold text-sky-800 mb-2">${t('portfolioMissionTitle')}</h3>
+                                       <p>${t('portfolioMissionDesc')}</p>
+                                    </div>
+                                     <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-green-500">
+                                       <h3 class="text-2xl font-bold text-green-800 mb-2">${t('portfolioVisionTitle')}</h3>
+                                       <p>${t('portfolioVisionDesc')}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="space-y-8">
+                                <div class="bg-white p-4 rounded-lg shadow-lg"><img src="https://i.imgur.com/yC0Eopd.jpeg" alt="${t('portfolioLicense1Alt')}" class="rounded-md w-full" /><p class="text-center text-sm text-gray-600 mt-2 font-medium">${t('portfolioLicense1Alt')}</p></div>
+                                <div class="bg-white p-4 rounded-lg shadow-lg"><img src="https://i.imgur.com/EWrnC9Y.jpeg" alt="${t('portfolioLicense2Alt')}" class="rounded-md w-full" /><p class="text-center text-sm text-gray-600 mt-2 font-medium">${t('portfolioLicense2Alt')}</p></div>
+                            </div>
+                        </div>`)}
+                    ${Section(t('portfolioServicesSectionTitle'), `
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            ${services.map(s => `<div class="bg-sky-50 p-6 rounded-xl text-center shadow-lg transform hover:scale-105 transition-transform duration-300"><div class="text-4xl mb-4">${s.icon}</div><h3 class="text-xl font-bold text-sky-900 mb-2">${s.title}</h3><p class="text-gray-600">${s.description}</p></div>`).join('')}
+                        </div>`, 'bg-white')}
+                </main>
+                ${Footer()}
+            </div>
+            `;
+        };
+        
+        const ContactPage = () => `
+            <div data-page="contact" class="bg-gray-50 min-h-screen flex flex-col">
+                ${PageHeader('Contact')}
+                <main class="flex-grow">
+                    <div class="bg-sky-800 text-white py-16 text-center">
+                         <h1 class="text-5xl font-extrabold">${t('contactTitle')}</h1>
+                         <p class="mt-4 text-xl text-sky-200 max-w-3xl mx-auto px-4">${t('contactSubtitle')}</p>
+                    </div>
+                    <section class="py-16">
+                      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                          <div class="p-8 bg-white rounded-xl shadow-2xl">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">${t('contactOfficeAddress')}</h3>
+                            <p class="text-lg text-gray-700 mb-6"><strong>${t('companyName')} (${t('rlNumberShort')})</strong><br />${t('contactAddress')}</p>
+                            <div class="space-y-4">
+                               <p class="flex items-center text-lg text-gray-700"><span class="bg-sky-100 p-2 rounded-full ltr:mr-3 rtl:ml-3">📞</span><strong>${t('contactPhone')}:</strong> <span dir="ltr">${t('contactPhoneNumber')}</span></p>
+                               <p class="flex items-center text-lg text-gray-700"><span class="bg-sky-100 p-2 rounded-full ltr:mr-3 rtl:ml-3">📱</span><strong>${t('contactHotline')}:</strong> <span dir="ltr">${t('contactHotlineNumber')}</span></p>
+                               <p class="flex items-center text-lg text-gray-700"><span class="bg-sky-100 p-2 rounded-full ltr:mr-3 rtl:ml-3">📧</span><strong>${t('contactEmail')}:</strong> progressmm2009@gmail.com</p>
+                            </div>
+                          </div>
+                          <div class="p-8 bg-sky-50 rounded-xl shadow-2xl">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">${t('contactTalkToUs')}</h3>
+                            <form action="https://formspree.io/f/xgegrvya" method="POST">
+                              <input type="text" name="name" placeholder="${t('formPlaceholderName')}" class="w-full p-3 mb-4 border rounded-lg" required />
+                              <input type="email" name="email" placeholder="${t('formPlaceholderEmail')}" class="w-full p-3 mb-4 border rounded-lg" required />
+                              <textarea name="message" placeholder="${t('contactMessagePlaceholder')}" rows="4" class="w-full p-3 mb-4 border rounded-lg" required></textarea>
+                              <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-lg">${t('contactSendButton')}</button>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                </main>
+                ${Footer()}
+            </div>
+        `;
+        
+        // --- RENDER FUNCTION ---
+        function render() {
+            const html = `
+                ${MainPage()}
+                ${StaffPage()}
+                ${JobsPage()}
+                ${PortfolioPage()}
+                ${ContactPage()}
+            `;
+            rootElement.innerHTML = html;
+
+            // Activate the current page
+            document.querySelectorAll('[data-page]').forEach(el => {
+                if (el.dataset.page === state.currentPage) {
+                    el.classList.add('active');
+                } else {
+                    el.classList.remove('active');
+                }
+            });
+        }
+        
+        // --- EVENT HANDLERS / PUBLIC API ---
+        window.app = {
+            navigate,
+            setLocale,
+            updateFilter: (filter) => {
+                state.jobFilter = filter;
+                render();
+            },
+            updateSearch: (query) => {
+                state.searchQuery = query;
+                render();
+            }
+        };
+
+        // --- INITIAL RENDER ---
+        document.documentElement.lang = state.locale;
+        document.documentElement.dir = state.locale === 'ar' ? 'rtl' : 'ltr';
+        render();
+
+        // --- END OF INLINED SCRIPT ---
+    </script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

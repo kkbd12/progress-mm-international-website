@@ -4,9 +4,7 @@ import Footer from '../components/Footer';
 import { StaffCard } from '../components/StaffCard';
 import { useTranslations } from '../hooks/useTranslations';
 
-interface StaffPageProps {
-  onNavigateHome: () => void;
-}
+
 
 import { Link } from 'react-router-dom';
 const StaffPageHeader: React.FC = () => {
@@ -31,13 +29,13 @@ const StaffPageHeader: React.FC = () => {
 }
 
 
-const StaffPage: React.FC<StaffPageProps> = ({ onNavigateHome }) => {
+const StaffPage: React.FC = () => {
   const { t } = useTranslations();
   const [managingDirector, ...otherStaff] = STAFF_MEMBERS;
 
   return (
     <div className="bg-gray-50 min-h-screen flex flex-col">
-      <StaffPageHeader onNavigateHome={onNavigateHome} />
+  <StaffPageHeader />
       <main className="flex-grow">
         <div 
           className="relative bg-cover bg-center h-80 flex items-center justify-center text-center" 
@@ -74,12 +72,9 @@ const StaffPage: React.FC<StaffPageProps> = ({ onNavigateHome }) => {
                 )}
 
                 <div className="text-center mt-16">
-                    <button
-                    onClick={onNavigateHome}
-                    className="bg-sky-700 hover:bg-sky-800 text-white font-bold py-3 px-8 rounded-lg shadow-xl transition duration-300 transform hover:scale-105"
-                    >
+                  <Link to="/" className="bg-sky-700 hover:bg-sky-800 text-white font-bold py-3 px-8 rounded-lg shadow-xl transition duration-300 transform hover:scale-105">
                     {t('staffBackHome')}
-                    </button>
+                  </Link>
                 </div>
             </div>
         </div>

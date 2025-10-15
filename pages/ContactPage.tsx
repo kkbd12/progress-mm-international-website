@@ -3,9 +3,7 @@ import Footer from '../components/Footer';
 import Contact from '../components/Contact';
 import { useTranslations } from '../hooks/useTranslations';
 
-interface ContactPageProps {
-  onNavigateHome: () => void;
-}
+
 
 import { Link } from 'react-router-dom';
 const ContactPageHeader: React.FC = () => {
@@ -29,11 +27,11 @@ const ContactPageHeader: React.FC = () => {
     );
 };
 
-const ContactPage: React.FC<ContactPageProps> = ({ onNavigateHome }) => {
+const ContactPage: React.FC = () => {
   const { t } = useTranslations();
   return (
     <div className="bg-gray-50 min-h-screen flex flex-col">
-      <ContactPageHeader onNavigateHome={onNavigateHome} />
+  <ContactPageHeader />
       <main className="flex-grow">
         <div className="bg-sky-800 text-white py-16 text-center">
              <h1 className="text-5xl font-extrabold">{t('contactTitle')}</h1>
@@ -41,12 +39,9 @@ const ContactPage: React.FC<ContactPageProps> = ({ onNavigateHome }) => {
         </div>
         <Contact />
          <div className="text-center pb-16">
-            <button
-            onClick={onNavigateHome}
-            className="bg-sky-700 hover:bg-sky-800 text-white font-bold py-3 px-8 rounded-lg shadow-xl transition duration-300 transform hover:scale-105"
-            >
-            {t('staffBackHome')}
-            </button>
+            <Link to="/" className="bg-sky-700 hover:bg-sky-800 text-white font-bold py-3 px-8 rounded-lg shadow-xl transition duration-300 transform hover:scale-105">
+              {t('staffBackHome')}
+            </Link>
         </div>
       </main>
       <Footer />

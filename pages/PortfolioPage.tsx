@@ -35,7 +35,7 @@ const Section: React.FC<{ title: string; children: React.ReactNode; className?: 
 );
 
 
-const PortfolioPage: React.FC<{ onNavigateHome: () => void }> = ({ onNavigateHome }) => {
+const PortfolioPage: React.FC = () => {
   const { t } = useTranslations();
   
   const services = [
@@ -63,7 +63,7 @@ const PortfolioPage: React.FC<{ onNavigateHome: () => void }> = ({ onNavigateHom
 
   return (
     <div className="bg-gray-50 min-h-screen flex flex-col">
-        <PortfolioPageHeader onNavigateHome={onNavigateHome} />
+        <PortfolioPageHeader />
         <main>
             <div className="bg-sky-800 text-white py-16 text-center">
                  <h1 className="text-5xl font-extrabold">{t('portfolioTitle')}</h1>

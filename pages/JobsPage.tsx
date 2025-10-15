@@ -7,9 +7,7 @@ import { useTranslations } from '../hooks/useTranslations';
 import { Job } from '../types';
 import { JOB_DEMANDS } from '../constants';
 
-interface JobsPageProps {
-  onNavigateHome: () => void;
-}
+
 
 import { Link } from 'react-router-dom';
 const JobsPageHeader: React.FC = () => {
@@ -34,12 +32,12 @@ const JobsPageHeader: React.FC = () => {
 };
 
 
-const JobsPage: React.FC<JobsPageProps> = ({ onNavigateHome }) => {
+const JobsPage: React.FC = () => {
   const jobs: Job[] = JOB_DEMANDS;
 
   return (
     <div className="bg-gray-50 min-h-screen flex flex-col">
-      <JobsPageHeader onNavigateHome={onNavigateHome} />
+      <JobsPageHeader />
       <main>
         <JobDemands jobs={jobs} isLoading={false} error={null} />
         <JobApplicationForm jobs={jobs} />

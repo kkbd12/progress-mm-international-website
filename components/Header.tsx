@@ -1,52 +1,20 @@
+
 import React, { useState } from 'react';
 import { useTranslations } from '../hooks/useTranslations';
 import LanguageSwitcher from './LanguageSwitcher';
+import { Link } from 'react-router-dom';
 
-interface HeaderProps {
-    onNavigateToStaff: () => void;
-    onNavigateToJobs: () => void;
-    onNavigateToPortfolio: () => void;
-    onNavigateToContact: () => void;
-}
-
-const Header: React.FC<HeaderProps> = ({ onNavigateToStaff, onNavigateToJobs, onNavigateToPortfolio, onNavigateToContact }) => {
+const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t, locale } = useTranslations();
 
   const navLinks = [
-    { href: '#home', text: t('navHome') },
-    { href: '#portfolio-page', text: t('navAbout') },
-    { href: '#jobs-page', text: t('navJobs') },
-    { href: '#staff-page', text: t('navStaff') },
-    { href: '#contact-page', text: t('navContact') },
+    { to: '/', text: t('navHome') },
+    { to: '/portfolio', text: t('navAbout') },
+    { to: '/jobs', text: t('navJobs') },
+    { to: '/staff', text: t('navStaff') },
+    { to: '/contact', text: t('navContact') },
   ];
-
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    const href = e.currentTarget.getAttribute('href');
-    if (!href) return;
-
-    if (href === '#staff-page') {
-        onNavigateToStaff();
-    } else if (href === '#jobs-page') {
-        onNavigateToJobs();
-    } else if (href === '#portfolio-page') {
-        onNavigateToPortfolio();
-    } else if (href === '#contact-page') {
-        onNavigateToContact();
-    } else {
-        const targetId = href.substring(1);
-        const targetElement = document.getElementById(targetId);
-    
-        if (targetElement) {
-          targetElement.scrollIntoView({ behavior: 'smooth' });
-        }
-    }
-    
-    if (isMenuOpen) {
-      setIsMenuOpen(false);
-    }
-  };
 
   return (
     <header className="bg-sky-900 shadow-lg sticky top-0 z-50">
@@ -59,9 +27,9 @@ const Header: React.FC<HeaderProps> = ({ onNavigateToStaff, onNavigateToJobs, on
           <div className="flex items-center">
             <nav className="hidden md:flex space-x-8">
               {navLinks.map((link) => (
-                <a key={link.href} href={link.href} onClick={handleNavClick} className="text-white hover:text-yellow-400 transition duration-300 font-medium">
+                <Link key={link.to} to={link.to} className="text-white hover:text-yellow-400 transition duration-300 font-medium">
                   {link.text}
-                </a>
+                </Link>
               ))}
             </nav>
             <LanguageSwitcher />
@@ -78,9 +46,9 @@ const Header: React.FC<HeaderProps> = ({ onNavigateToStaff, onNavigateToJobs, on
           <div className="md:hidden pb-4">
             <nav className="flex flex-col space-y-2">
               {navLinks.map((link) => (
-                <a key={link.href} href={link.href} onClick={handleNavClick} className="text-white hover:bg-sky-800 px-3 py-2 rounded-md font-medium">
+                <Link key={link.to} to={link.to} className="text-white hover:bg-sky-800 px-3 py-2 rounded-md font-medium" onClick={() => setIsMenuOpen(false)}>
                   {link.text}
-                </a>
+                </Link>
               ))}
             </nav>
           </div>

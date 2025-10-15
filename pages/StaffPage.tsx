@@ -8,7 +8,8 @@ interface StaffPageProps {
   onNavigateHome: () => void;
 }
 
-const StaffPageHeader: React.FC<{ onNavigateHome: () => void }> = ({ onNavigateHome }) => {
+import { Link } from 'react-router-dom';
+const StaffPageHeader: React.FC = () => {
     const { t, locale } = useTranslations();
     return (
         <header className="bg-sky-900 shadow-lg sticky top-0 z-50">
@@ -19,9 +20,9 @@ const StaffPageHeader: React.FC<{ onNavigateHome: () => void }> = ({ onNavigateH
                  <span className={`px-3 py-1 bg-yellow-400 text-sky-900 text-xs font-semibold rounded-full hidden sm:inline-block ${locale === 'ar' ? 'mr-4' : 'ml-4'}`}>{t('rlNumberShort')}</span>
               </div>
               <nav>
-                <button onClick={onNavigateHome} className="text-white hover:text-yellow-400 transition duration-300 font-medium px-4 py-2 rounded-md hover:bg-sky-800">
+                <Link to="/" className="text-white hover:text-yellow-400 transition duration-300 font-medium px-4 py-2 rounded-md hover:bg-sky-800">
                   {t('navHome')}
-                </button>
+                </Link>
               </nav>
             </div>
           </div>

@@ -1,17 +1,10 @@
+
 import React from 'react';
 import { useTranslations } from '../hooks/useTranslations';
+import { Link } from 'react-router-dom';
 
-interface HeroProps {
-  onNavigateToJobs: () => void;
-}
-
-const Hero: React.FC<HeroProps> = ({ onNavigateToJobs }) => {
+const Hero: React.FC = () => {
   const { t } = useTranslations();
-  
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    onNavigateToJobs();
-  };
 
   return (
     <section id="home" className="hero-bg h-[400px] sm:h-[500px] flex items-center justify-center text-center">
@@ -22,9 +15,9 @@ const Hero: React.FC<HeroProps> = ({ onNavigateToJobs }) => {
         <p className="text-lg sm:text-xl text-yellow-300 mb-8 text-shadow-custom">
           {t('heroSubtitle')}
         </p>
-        <a href="#jobs-page" onClick={handleNavClick} className="bg-yellow-500 hover:bg-yellow-600 text-sky-900 font-bold py-3 px-8 rounded-lg shadow-xl transition duration-300 transform hover:scale-105">
+        <Link to="/jobs" className="bg-yellow-500 hover:bg-yellow-600 text-sky-900 font-bold py-3 px-8 rounded-lg shadow-xl transition duration-300 transform hover:scale-105">
           {t('heroButton')}
-        </a>
+        </Link>
       </div>
     </section>
   );

@@ -3,25 +3,26 @@ import Footer from '../components/Footer';
 import { useTranslations } from '../hooks/useTranslations';
 
 // A generic header component for sub-pages
-const PortfolioPageHeader: React.FC<{ onNavigateHome: () => void }> = ({ onNavigateHome }) => {
-    const { t, locale } = useTranslations();
-    return (
-        <header className="bg-sky-900 shadow-lg sticky top-0 z-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center h-20">
-              <div className="flex items-center">
-                <h1 className="text-xl md:text-2xl font-bold text-white tracking-wider">{t('companyName')}</h1>
-                 <span className={`px-3 py-1 bg-yellow-400 text-sky-900 text-xs font-semibold rounded-full hidden sm:inline-block ${locale === 'ar' ? 'mr-4' : 'ml-4'}`}>{t('rlNumberShort')}</span>
-              </div>
-              <nav>
-                <button onClick={onNavigateHome} className="text-white hover:text-yellow-400 transition duration-300 font-medium px-4 py-2 rounded-md hover:bg-sky-800">
-                  {t('navHome')}
-                </button>
-              </nav>
-            </div>
-          </div>
-        </header>
-    );
+import { Link } from 'react-router-dom';
+const PortfolioPageHeader: React.FC = () => {
+        const { t, locale } = useTranslations();
+        return (
+                <header className="bg-sky-900 shadow-lg sticky top-0 z-50">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="flex justify-between items-center h-20">
+                            <div className="flex items-center">
+                                <h1 className="text-xl md:text-2xl font-bold text-white tracking-wider">{t('companyName')}</h1>
+                                 <span className={`px-3 py-1 bg-yellow-400 text-sky-900 text-xs font-semibold rounded-full hidden sm:inline-block ${locale === 'ar' ? 'mr-4' : 'ml-4'}`}>{t('rlNumberShort')}</span>
+                            </div>
+                            <nav>
+                                <Link to="/" className="text-white hover:text-yellow-400 transition duration-300 font-medium px-4 py-2 rounded-md hover:bg-sky-800">
+                                    {t('navHome')}
+                                </Link>
+                            </nav>
+                        </div>
+                    </div>
+                </header>
+        );
 };
 
 const Section: React.FC<{ title: string; children: React.ReactNode; className?: string }> = ({ title, children, className = '' }) => (
@@ -71,16 +72,16 @@ const PortfolioPage: React.FC<{ onNavigateHome: () => void }> = ({ onNavigateHom
             
             <Section title={t('portfolioAboutSectionTitle')}>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-                    <div className="text-lg text-gray-700 leading-relaxed space-y-4">
-                        <p><strong>{t('companyName')} ({t('rlNumberShort')})</strong> {t('portfolioAboutPara')}</p>
+                    <div className="text-lg text-gray-700 leading-relaxed space-y-4 text-justify">
+                        <p className="text-justify"><strong>{t('companyName')} ({t('rlNumberShort')})</strong> {t('portfolioAboutPara')}</p>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-6">
                             <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-sky-500">
                                <h3 className="text-2xl font-bold text-sky-800 mb-2">{t('portfolioMissionTitle')}</h3>
-                               <p>{t('portfolioMissionDesc')}</p>
+                               <p className="text-justify">{t('portfolioMissionDesc')}</p>
                             </div>
                              <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-green-500">
                                <h3 className="text-2xl font-bold text-green-800 mb-2">{t('portfolioVisionTitle')}</h3>
-                               <p>{t('portfolioVisionDesc')}</p>
+                               <p className="text-justify">{t('portfolioVisionDesc')}</p>
                             </div>
                         </div>
                     </div>
@@ -100,7 +101,7 @@ const PortfolioPage: React.FC<{ onNavigateHome: () => void }> = ({ onNavigateHom
             <Section title={t('portfolioBangladeshSectionTitle')} className='bg-white'>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div className="order-2 lg:order-1">
-                        <p className="text-lg text-gray-700 leading-relaxed">{t('portfolioBangladeshPara')}</p>
+                        <p className="text-lg text-gray-700 leading-relaxed text-justify">{t('portfolioBangladeshPara')}</p>
                     </div>
                     <div className="order-1 lg:order-2">
                         <img src="https://i.imgur.com/XZFWGCX.jpeg" alt={t('portfolioBangladeshImageAlt')} className="rounded-lg shadow-xl w-full h-80 object-cover" />
@@ -114,7 +115,7 @@ const PortfolioPage: React.FC<{ onNavigateHome: () => void }> = ({ onNavigateHom
                          <img src="https://i.imgur.com/eF8Z1zV.jpeg" alt={t('portfolioManpowerImageAlt')} className="rounded-lg shadow-xl w-full h-80 object-cover" />
                     </div>
                     <div>
-                        <p className="text-lg text-gray-700 leading-relaxed">{t('portfolioManpowerPara')}</p>
+                        <p className="text-lg text-gray-700 leading-relaxed text-justify">{t('portfolioManpowerPara')}</p>
                     </div>
                 </div>
             </Section>
@@ -122,7 +123,7 @@ const PortfolioPage: React.FC<{ onNavigateHome: () => void }> = ({ onNavigateHom
             <Section title={t('portfolioTrainingSectionTitle')} className='bg-white'>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                      <div className="order-2 lg:order-1">
-                        <p className="text-lg text-gray-700 leading-relaxed">{t('portfolioTrainingPara')}</p>
+                        <p className="text-lg text-gray-700 leading-relaxed text-justify">{t('portfolioTrainingPara')}</p>
                     </div>
                     <div className="order-1 lg:order-2">
                          <img src="https://i.imgur.com/NpU8VpI.jpeg" alt={t('portfolioTrainingImageAlt')} className="rounded-lg shadow-xl w-full h-80 object-cover" />

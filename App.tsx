@@ -31,13 +31,5 @@ const App: React.FC = () => {
 };
 
 export default App;
-export default defineConfig({
-  base: './',
-  // ...existing config
-});
 
-{
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
-  ]
-}
+

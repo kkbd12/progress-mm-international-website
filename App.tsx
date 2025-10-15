@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainPage from './pages/MainPage';
@@ -32,3 +31,13 @@ const App: React.FC = () => {
 };
 
 export default App;
+export default defineConfig({
+  base: './',
+  // ...existing config
+});
+
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
